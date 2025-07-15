@@ -13,7 +13,7 @@ spi = busio.SPI(board.SCK,
 radio = CC1101(spi, freq=434400000, "666A")
 radio.setupRX()
 radio.setupCheck()
-# Loop
+# the operational Loop
 while True:
 if 'take measurement' in radio.reciveData():
  [print(x, y, z) for x,y,z in sensor1.acceleration]
